@@ -1,0 +1,166 @@
+body {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+}
+
+img {
+    pointer-events: none;
+}
+
+.anketa-page {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(32, 33, 36, 1) 98%);
+}
+
+.course-page {
+    background: #F2F2F2;
+}
+
+.special__item:nth-child(odd) {
+    padding-right: 10px;
+}
+
+.special__item:nth-child(even) {
+    padding-left: 10px;
+}
+
+.special__title {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.homework__image {
+    transform: rotate(30deg);
+    max-width: 50%;
+    bottom: -40px;
+    right: -50px;
+    pointer-events: none;
+}
+
+.special__description {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+    .special__item:nth-child(odd) {
+        padding-right: 0;
+    }
+
+    .special__item:nth-child(even) {
+        padding-left: 0;
+    }
+}
+
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.header {
+    color: #fff;
+}
+
+.curator__img {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+}
+
+.margin__right-to-bottom {
+    margin-right: 10px;
+}
+
+@media (max-width: 575.98px) {
+    .margin__right-to-bottom {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .btn__curator {
+        flex-basis: 100%;
+    }
+
+    .curator__title {
+        font-size: 16px !important;
+    }
+}
+
+.header__company {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.header__info {
+    background-color: #3b3c3f;
+    border: 0 solid transparent;
+    padding: 6px 15px;
+    border-radius: 50px;
+
+    color: #f0f0f0;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 17px;
+}
+
+.header__logo .logo {
+    width: 29px;
+    height: 29px;
+    display: block;
+}
+
+.icon-hover {
+    transition: opacity .2s linear;
+}
+
+.icon-hover:hover {
+    opacity: .75;
+}
+
+.disable .module__content{
+    background: #222222;
+}
+
+.disable .module__title {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.module__title {
+    color: #000000;
+}
+
+.module__thumb {
+    max-height: 140px;
+    overflow: hidden;
+}
+
+.disable .module__thumb img {
+    filter: grayscale(1);
+}
+
+.module__thumb img {
+    display: block;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.module__content {
+    box-shadow: rgba(0, 0, 0, 0.32) 0px 1px 4px;
+    transition: transform .4s cubic-bezier(0, .91, .27, 1.07);
+    background: #fff;
+}
+
+.module__content:hover {
+    transform: translateY(-10px);
+}
