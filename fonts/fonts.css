@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'LabGrotesque';
+    font-weight: 700;
+    src: url('lab/LabGrotesque-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'LabGrotesque';
+    font-weight: 300;
+    src: url('lab/LabGrotesque-Light.woff2') format('woff2');
+}
+
+
+@font-face {
+    font-family: 'LabGrotesque';
+    font-weight: 500;
+    src: url('lab/LabGrotesque-Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'LabGrotesque';
+    font-weight: 400;
+    src: url('lab/LabGrotesque-Regular.woff2') format('woff2');
+}
+
+
+@font-face {
+    font-family: 'TasmanMind';
+    font-weight: 700;
+    src: url('tasman/TasmanMind-Bold.woff2') format('woff2'),
+    url('tasman/TasmanMind-Bold.woff') format("woff");
+}
+
+@font-face {
+    font-family: 'TasmanMind';
+    font-weight: 200;
+    src: url('tasman/TasmanMind-ExtraLigh.woff2') format('woff2'),
+    url('tasman/TasmanMind-ExtraLigh.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'TasmanMind';
+    font-weight: 500;
+    src: url('tasman/TasmanMind-Medium.woff2') format('woff2'),
+    url('tasman/TasmanMind-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'TasmanMind';
+    font-weight: 300;
+    src: url('tasman/TasmanMind-Light.woff2') format('woff2'),
+    url('tasman/TasmanMind-Light.woff') format('woff');
+}
+
