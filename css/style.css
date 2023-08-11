@@ -793,4 +793,15 @@ img {
     .footer__cookie a {
         color: #666;
     }
+
+    .special__list {
+        display: flex;
+        gap: 10px;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+    }
+
+    .special__list-item {
+        flex: 0 0 auto;
+    }
 }
