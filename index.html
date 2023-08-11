@@ -11,25 +11,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet">
 
+    <link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.2/css/fileinput.min.css" media="all"
+          rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/theme-explorer.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="css/custom.css">
     <title>Страница курса</title>
 </head>
-<body class="course-page">
+<body class="overflow-hidden course-page">
+
+<div class="preloader">
+    <div class="wrapper">
+        <img src="assets/red-logo.svg" alt="" class="logo-bg">
+        <div class="loader"></div>
+    </div>
+</div>
+
 <div class="site-container">
-    <header class="header mt-3 mb-3">
-        <div class="container-fluid px-5 d-flex justify-content-between align-items-center">
+    <header class="header mt-3">
+        <div class="container-fluid px-2 px-xl-5 px-lg-5 px-md-5 px-sm-5 d-flex justify-content-between align-items-center">
             <div class="header__logo d-flex flex-row align-items-center">
                 <img src="assets/red-logo.svg" alt="" class="logo">
                 <div class="header__company ms-2 text-dark">Moneymaker</div>
             </div>
             <div class="d-flex align-items-center">
-                <div class="header__user d-flex align-items-center text-dark">
-                    <span class="me-3">Мукашев Т.М</span>
-
-                    <a href="#" id="user" style="width: 42px; height: 42px;"
-                       class="d-block bg-white rounded-circle overflow-hidden">
-                        <svg class="d-block object-fit-cover" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+                <a href="#" style="font-size: 14px;"
+                   id="user">
+                    <div style="width: 35px; height: 35px;"
+                         class="d-block bg-white rounded-circle overflow-hidden">
+                        <svg class="d-block object-fit-cover" xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 60 60">
                             <defs>
                                 <mask x="0" y="0" width="60" height="60">
                                     <g>
@@ -53,62 +70,54 @@
                                 </g>
                             </g>
                         </svg>
-                    </a>
-                </div>
+                    </div>
+                </a>
                 <div class="d-flex ms-3 align-items-center">
-                    <a href="#" title="Выйти" class="btn rounded-3 btn-sm text-white">
-                        <svg width="28" viewBox="0 0 64.00 64.00" xmlns="http://www.w3.org/2000/svg" stroke-width="4.992"
-                             stroke="#d03e3e" fill="none">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
-                               stroke="#CCCCCC" stroke-width="0.128"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <polyline points="46.02 21.95 55.93 31.86 46.02 41.77"></polyline>
-                                <line x1="55.93" y1="31.86" x2="19.59" y2="31.86"></line>
-                                <path d="M40,38.18V52a2.8,2.8,0,0,1-2.81,2.8H12A2.8,2.8,0,0,1,9.16,52V11.77A2.8,2.8,0,0,1,12,9H37.19A2.8,2.8,0,0,1,40,11.77V25"></path>
-                            </g>
-                        </svg>
+                    <a href="#" title="Выйти" class="logout">
+                        Выйти
                     </a>
                 </div>
             </div>
         </div>
     </header>
-    <main class="main mb-5">
-        <div class="special mt-5">
+    <main class="main main__content mb-5">
+        <div class="special mt-4">
             <div class="container">
-                <div class="title h4 mb-4 fw-medium">
+                <div class="title mb-3 fw-medium">
                     Специально для тебя
                 </div>
                 <div class="row d-flex align-items-stretch flex-wrap">
                     <div class="mb-2 col-12 col-lg-6 col-md-12 col-sm-12 ">
-                        <div class="h-100 p-4 rounded-4 bg-white d-flex align-items-center flex-row">
-                            <div class="col-2 rounded-3 overflow-hidden">
+                        <div class="h-100 special__inner bg-white d-flex align-items-center flex-row" data-fancybox
+                             data-src="#special-bot">
+                            <div class="col-3 col-xl-2 col-lg-2 col-md-2 col-sm-2 overflow-hidden">
                                 <img src="assets/special-img1.png"
-                                     class="object-fit-cover rounded-3 d-block mw-100"
+                                     class="object-fit-cover special__image d-block mw-100"
                                      alt="Бот">
                             </div>
-                            <div class="col-10 ps-3">
-                                <div class="special__title fw-bold">
+                            <div class="col-9 col-xl-10 col-lg-10 col-md-10 col-sm-10 special__content">
+                                <div class="special__title">
                                     Персональная скидка 67% на бота для автоснижения цены
                                 </div>
-                                <div class="special__description text-dark fw-normal">
+                                <div class="special__description text-dark">
                                     Подключай бота за 9 560 тенге в месяц и повышай продажи
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="mb-2 col-12 col-lg-6 col-md-12 col-sm-12 ">
-                        <div class="h-100 p-4 rounded-4 bg-white d-flex align-items-center flex-row">
-                            <div class="col-2 rounded-3 overflow-hidden">
+                        <div class="h-100 special__inner bg-white d-flex align-items-center flex-row" data-fancybox
+                             data-src="#special-table">
+                            <div class="col-3 col-xl-2 col-lg-2 col-md-2 col-sm-2 overflow-hidden">
                                 <img src="assets/special-img2.png"
-                                     class="object-fit-cover rounded-3 d-block mw-100"
+                                     class="object-fit-cover special__image d-block mw-100"
                                      alt="Бот">
                             </div>
-                            <div class="col-10 ps-3">
-                                <div class="special__title fw-bold">
+                            <div class="col-9 col-xl-10 col-lg-10 col-md-10 col-sm-10 special__content">
+                                <div class="special__title">
                                     Автоматизированная таблица для учёта продаж с Каспи Магазина
                                 </div>
-                                <div class="special__description text-dark fw-normal">
+                                <div class="special__description text-dark">
                                     Волшебная таблетка от рутины — таблица заполняется сама
                                 </div>
                             </div>
@@ -118,87 +127,78 @@
             </div>
         </div>
 
-        <div class="course mt-5">
+        <div class="course w-100">
             <div class="container">
                 <div class="title h4 mb-4 fw-medium">
                     Моё обучение
                 </div>
-                <div class="row d-flex align-items-stretch flex-wrap">
-                    <div class=" mb-2 col-12 col-lg-8 col-md-12 col-sm-12 ">
-                        <div class="h-100 p-4 rounded-4 bg-white d-flex flex-column justify-content-between">
-                            <div class="col-10 mb-5">
-                                <div class="course__stat small mb-3">
+                <div class="row d-flex align-items-stretch flex-wrap course__inner">
+                    <div class="mb-2 col-12 col-lg-8 col-md-12 col-sm-12 ">
+                        <div class="h-100 course__info-wrapper bg-white d-flex flex-column justify-content-between">
+                            <div class="col-12 col-lg-10 col-md-10">
+                                <div class="course__stat">
                                     10 модулей
-                                    <span style="font-weight: 500;">
-                                        <svg width="18px" viewBox="0 0 24 24" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4 12H20M20 12L16 8M20 12L16 16" stroke="#000000" stroke-width="2"
-                                              stroke-linecap="round"
-                                              stroke-linejoin="round"/>
-                                    </svg>
+                                    <span class="arrow">
+                                        →
                                     </span>
                                     42 урока
                                 </div>
-                                <div class="course__title fs-2 lh-1 fw-bold">
+                                <div class="course__title col-12 col-lx-8 col-lg-8">
                                     Как открыть Каспи Магазин и зарабатывать от 12 000 000?
                                 </div>
                             </div>
-                            <div>
-                                <button class="btn btn-dark rounded-3 fs-6 px-4 py-3">Начать обучение</button>
+                            <div class="btn--wrapper">
+                                <a href="#" class="btn btn--custom btn-course-start btn-dark">Начать обучение</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="mb-2 col-12 col-lg-4 col-md-12 col-sm-12 ">
-                        <div class="overflow-hidden position-relative h-100 mw-100 w-100 p-4 text-white rounded-4 flex-column justify-content-between d-flex flex-row"
+                    <div class="mb-2 col-12 col-lg-4 col-md-12 col-sm-12 homework__course--wrapper">
+                        <div class="overflow-hidden course__homework-info-wrapper position-relative h-100 mw-100 w-100 flex-column justify-content-between d-flex flex-row"
                              style="background: #222222;">
                             <img src="assets/homework-img.png" class="position-absolute z-0 d-block homework__image"
                                  alt="Img">
-                            <div class="col-12">
-                                <div class="course__stat small mb-3">
+                            <div class="col-12 text-white z-3">
+                                <div class="homework__title">
                                     Таймлайн на домашку урока №<span>...</span>
                                 </div>
-                                <div class="special__title fs-3 fw-bold">
-                                    00 дней 00:00:00
-                                </div>
-                                <div class="special__description text-dark fw-normal">
-                                    Волшебная таблетка от рутины — таблица заполняется сама
-                                </div>
                             </div>
-                            <div>
-                                <button class="btn btn-dark text-white border-white border-2 rounded-3 fs-6 px-4 py-3">
+                            <div class="btn--wrapper">
+                                <button data-fancybox data-src="#homework"
+                                        class="btn btn--custom btn-dark text-white border-white border-2">
                                     Загрузить домашку
                                 </button>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
 
-        <div class="curator mt-5">
+        <div class="curator w-100">
             <div class="container">
                 <div class="title h4 mb-4 fw-medium">
                     Моя поддержка
                 </div>
-                <div class="h-100 p-4 rounded-4 bg-white d-flex flex-wrap align-items-center position-relative flex-row">
+                <div class="h-100 curator__inner bg-white d-flex flex-wrap align-items-center position-relative flex-row">
                     <div class="special__item mb-2 col-12 col-lg-6 col-md-12 d-flex flex-row">
                         <div class="col-2 d-none d-lg-block d-md-block z-0">
                             <img class="d-none d-lg-block d-md-block curator__img" src="assets/curator.svg"
                                  alt="Куратор">
                         </div>
                         <div class="col-12 col-lg-10 col-md-10 z-1">
-                            <div class="curator__title fs-5 lh-1 fw-bold text-start text-lg-center text-md-end text-xl-start mb-3">
-                                Твой куратор — Ербол
+                            <div class="curator__title text-start text-lg-center text-md-end text-xl-start">
+                                Твой персональный куратор — Ербол
                             </div>
                         </div>
                     </div>
 
                     <div class="special__item col-12 z-1 col-lg-6 col-md-12 justify-content-start justify-content-md-end justify-content-lg-end justify-content-xl-end d-flex flex-wrap flex-md-nowrap flex-lg-nowrap">
-                        <button class="btn btn__curator btn-dark rounded-3 fs-6 px-3 py-3 margin__right-to-bottom">
+                        <button class="btn btn--curator btn-dark margin__right-to-bottom">
                             Связаться с куратором
                         </button>
-                        <button class="btn btn__curator btn-dark rounded-3 fs-6 px-3 py-3">Связаться с Кайратом</button>
+                        <button class="btn btn--curator btn-dark">Связаться с Кайратом</button>
                     </div>
                 </div>
             </div>
@@ -210,138 +210,26 @@
                     Моя программа
                 </div>
                 <div class="row d-flex align-items-stretch flex-wrap ">
-                    <div class="module__item mb-4 col-12 col-lg-4 col-md-12 col-sm-12 ">
-                        <div class="module__content overflow-hidden position-relative h-100 mw-100 w-100 p-4 rounded-4 flex-column justify-content-between d-flex flex-row">
-                            <div class="col-12 mb-3 module__thumb">
+                    <div data-fancybox data-src="#module"
+                         class="module__item mb-4 col-12 col-lg-4 col-md-12 col-sm-12 ">
+                        <div class="module__content overflow-hidden position-relative h-100 mw-100 w- flex-column justify-content-between d-flex flex-row">
+                            <div class="col-12 mb-2 module__thumb">
                                 <img src="assets/modules/module-1.png" alt="Модуль">
                             </div>
-                            <div class="col-12">
-                                <div class="module__title fs-6 fw-bold">
-                                    Модуль 1. Прелюдия с каспи магазином. Открытие и подключение
-                                </div>
+                            <div class="module__title col-12">
+                                Модуль 1. Прелюдия с каспи магазином. Открытие и подключение
                             </div>
                         </div>
                     </div>
 
                     <div class="module__item mb-4 col-12 col-lg-4 col-md-12 col-sm-12 ">
-                        <div class="module__content overflow-hidden position-relative h-100 mw-100 w-100 p-4 rounded-4 flex-column justify-content-between d-flex flex-row">
-                            <div class="col-12 mb-3 module__thumb">
+                        <div class="module__content overflow-hidden position-relative h-100 mw-100 w-100 flex-column justify-content-between d-flex flex-row">
+                            <div class="col-12 mb-2 module__thumb">
                                 <img src="assets/modules/module-1.png" alt="Модуль">
                             </div>
-                            <div class="col-12">
-                                <div class="module__title fs-6 fw-bold">
-                                    Модуль 1. Прелюдия с каспи магазином. Открытие и подключение
-                                </div>
+                            <div class="module__title col-12">
+                                Модуль 1. Прелюдия с каспи магазином. Открытие и подключение
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="module__item module__item mb-4 col-12 col-lg-4 col-md-12 col-sm-12 ">
-                        <div class="module__content overflow-hidden position-relative h-100 mw-100 w-100 p-4 rounded-4 flex-column justify-content-between d-flex flex-row">
-                            <div class="col-12 mb-3 module__thumb">
-                                <img src="assets/modules/module-1.png" alt="Модуль">
-                            </div>
-                            <div class="col-12">
-                                <div class="module__title fs-6 fw-bold">
-                                    Модуль 1. Прелюдия с каспи магазином. Открытие и подключение
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="module__item module__item mb-4 col-12 col-lg-4 col-md-12 col-sm-12 ">
-                        <div class="module__content overflow-hidden position-relative h-100 mw-100 w-100 p-4 rounded-4 flex-column justify-content-between d-flex flex-row">
-                            <div class="col-12 mb-3 module__thumb">
-                                <img src="assets/modules/module-1.png" alt="Модуль">
-                            </div>
-                            <div class="col-12">
-                                <div class="module__title fs-6 fw-bold">
-                                    Модуль 1. Прелюдия с каспи магазином. Открытие и подключение
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="module__item module__item mb-4 col-12 col-lg-4 col-md-12 col-sm-12 ">
-                        <div class="module__content overflow-hidden position-relative h-100 mw-100 w-100 p-4 rounded-4 flex-column justify-content-between d-flex flex-row">
-                            <div class="col-12 mb-3 module__thumb">
-                                <img src="assets/modules/module-1.png" alt="Модуль">
-                            </div>
-                            <div class="col-12">
-                                <div class="module__title fs-6 fw-bold">
-                                    Модуль 1. Прелюдия с каспи магазином. Открытие и подключение
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="module__item module__item mb-4 col-12 col-lg-4 col-md-12 col-sm-12 ">
-                        <div class="module__content overflow-hidden position-relative h-100 mw-100 w-100 p-4 rounded-4 flex-column justify-content-between d-flex flex-row">
-                            <div class="col-12 mb-3 module__thumb">
-                                <img src="assets/modules/module-1.png" alt="Модуль">
-                            </div>
-                            <div class="col-12">
-                                <div class="module__title fs-6 fw-bold">
-                                    Модуль 1. Прелюдия с каспи магазином. Открытие и подключение
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="module__item module__item mb-4 col-12 col-lg-4 col-md-12 col-sm-12 ">
-                        <div class="module__content overflow-hidden position-relative h-100 mw-100 w-100 p-4 rounded-4 flex-column justify-content-between d-flex flex-row">
-                            <div class="col-12 mb-3 module__thumb">
-                                <img src="assets/modules/module-1.png" alt="Модуль">
-                            </div>
-                            <div class="col-12">
-                                <div class="module__title fs-6 fw-bold">
-                                    Модуль 1. Прелюдия с каспи магазином. Открытие и подключение
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="module__item module__item disable mb-4 col-12 col-lg-4 col-md-12 col-sm-12 ">
-                        <div class="module__content overflow-hidden position-relative h-100 mw-100 w-100 p-4 rounded-4 flex-column justify-content-between d-flex flex-row">
-                            <div class="col-12 mb-3 module__thumb">
-                                <img src="assets/modules/module-1.png" alt="Модуль">
-                            </div>
-                            <div class="col-12">
-                                <div class="module__title fs-6 fw-bold">
-                                    Модуль 1. Прелюдия с каспи магазином. Открытие и подключение
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="feedback__form">
-            <div class="container">
-                <div class="h-100 p-4 rounded-4 bg-white ">
-                    <div class="row">
-                        <div class="col-12 col-xl-6 col-lg-6">
-                            <div class="feedback__title fs-3">
-                                Есть вопросы по урокам?
-                            </div>
-                            <p class="feedback__subtitle fs-6 fw-normal">
-                                Можете поделиться впечатлениями, идеями или вопросами по уроку. Мы всё читаем и
-                                учитываем.
-                                Можете задать вопрос по уроку в этой форме.
-                            </p>
-                        </div>
-                        <div class="col-12 col-xl-6 col-lg-6">
-                            <form action="/" method="post">
-                                <div class="mb-3">
-                                    <label for="question" class="form-label"></label>
-                                    <textarea class="form-control" name="question" id="question" cols="30" rows="3"
-                                              placeholder="Ваш вопрос"></textarea>
-                                </div>
-                                <div class="mb-3 d-flex justify-content-end">
-                                    <button class="btn btn-primary">Отправить</button>
-                                </div>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -431,6 +319,144 @@
     </footer>
 </div>
 
+<div id="module" class="module__popup">
+    <div class="module__popup-subtitle"
+         style="--lesson-list-after-ln: 20%;padding: 30px 20px 0;">
+        01 Модуль
+    </div>
+    <div class="module__popup-title fw-bold fs-3 mb-4" style="padding: 0 20px;">Прелюдия с каспи магазинов. Открытие и
+        покдлючение
+    </div>
+    <div class="lessons__list row">
+        <a href="{{route('user.lesson', ['course' => $course, 'lesson' => $lesson])}}" class="lessons__list-item">
+            1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </a>
+        <a href="{{route('user.lesson', ['course' => $course, 'lesson' => $lesson])}}" class="lessons__list-item">
+            2. Lorem ipsum dolor sit amet, consectetur
+        </a>
+        <a href="{{route('user.lesson', ['course' => $course, 'lesson' => $lesson])}}" class="lessons__list-item">
+            3. Lorem ipsum dolor
+        </a>
+        <a href="{{route('user.lesson', ['course' => $course, 'lesson' => $lesson])}}" class="lessons__list-item">
+            4. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </a>
+        <a href="{{route('user.lesson', ['course' => $course, 'lesson' => $lesson])}}" class="lessons__list-item">
+            5. Lorem ipsum dolor sit amet, consectetur
+        </a>
+    </div>
+</div>
+
+<div id="homework" style="border-radius:30px;display:none;padding:50px;max-width:610px;width:100%;">
+    <div class="module__popup-title mb-3">Отправить домашнее задание</div>
+    <p class="module__popup-info">Советуем не пренебрегать домашним заданием и выполнять всё в срок, иначе ты можешь не
+        успеть за потоком.</p>
+    <form action="{{route('user.homework')}}" method="post" class="homework__form" enctype="multipart/form-data">
+        <input type="hidden" name="course_id" value="{{$course->id}}">
+        <div class="form-group mb-3">
+            <label class="form-label" for="lesson_id">Выбери урок</label>
+            <select name="lesson_id" id="lesson_id" class="form-select focus-ring focus-ring-dark mb-3"
+                    aria-label="Урок">
+                <option selected="">Выберите урок</option>
+
+                <option value="{{$lesson->id}}">Модуль 1, урок 1.</option>
+                <option value="{{$lesson->id}}">Модуль 1, урок 2.</option>
+                <option value="{{$lesson->id}}">Модуль 1, урок 3.</option>
+                <option value="{{$lesson->id}}">Модуль 1, урок 4.</option>
+                <option value="{{$lesson->id}}">Модуль 1, урок 5.</option>
+
+            </select>
+
+        </div>
+        <div class="mb-3">
+            <label for="user_answer" class="form-label">Укажи ссылку:</label>
+            <textarea name="user_answer" placeholder="Ссылка на файл (гугл-таблицы и т.д.)"
+                      class="form-control focus-ring focus-ring-dark"
+                      id="user_answer" rows="1"></textarea>
+        </div>
+        <div class="mb-5">
+            <input class="form-control focus-ring focus-ring-dark" type="file" name="files[]" multiple id="formFile">
+            <!--            <span class="small mt-2">Максимальный размер файла 4мб, допустимые форматы: jpg, png, docx, pdf, txt.</span>-->
+        </div>
+        <div class="d-flex justify-content-end">
+            <button class="btn btn--submit btn-dark" type="submit">Отправить</button>
+        </div>
+    </form>
+</div>
+
+<div id="special-table" style="border-radius:20px;display:none;padding: 70px 30px 330px;max-width:360px; width: 100%; max-height: 640px;
+ background: url('assets/special-table.png');
+ background-position: bottom left;
+ background-size: cover;
+ ">
+    <div class="special__module-title">
+        Автоматизированный учёт продаж
+    </div>
+    <p class="special__text">
+        Мы разработали гугл-таблицу, которая автоматически записывает и анализирует все заказы. С помощью неё ты можешь
+        развязать свои руки для более важных задач по повышению прибыли.
+    </p>
+    <a href="https://cabinet.myskills.kz/table" target="_blank" class="btn btn--special-table">Заказать таблицу</a>
+</div>
+
+<div id="special-bot" class="text-white" style="border-radius:20px;display:none;padding: 60px 30px 370px;max-width:360px; width: 100%; max-height: 640px;
+ background: url('assets/bot-special.png');
+ background-position: top left;
+ background-size: cover;
+ ">
+    <div class="special__module-title" style="color: #fff">
+        Повышай продажи вместе с нами!
+    </div>
+    <p class="special__text text-white">
+        Теперь тебе ничего не придётся делать. Только для наших студентов: бот со скидкой 67% — за 9 560 тенге в месяц.
+    </p>
+    <a href="https://moneymaker.myskills.kz/bot" target="_blank" class="btn btn--special-bot">Забрать скидку</a>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.2/js/plugins/buffer.min.js"
+        type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.2/js/plugins/filetype.min.js"
+        type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.2/js/plugins/piexif.min.js"
+        type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.2/js/plugins/sortable.min.js"
+        type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.2/js/fileinput.min.js"></script>
+<script src="js/ru.js"></script>
+<script src="js/explorer.js"></script>
+
+<script>
+    $.fn.fileinputBsVersion = '3.4.1';
+
+    $(document).ready(function () {
+        // initialize with defaults
+        $("#formFile").fileinput(
+            {
+                theme: "explorer",
+                uploadUrl: '',
+                uploadAsync: false,
+                language: "ru",
+                showUpload: false,
+                showCancel: false,
+                fileActionSettings: {
+                    showUpload: false,
+                    showZoom: false
+                },
+                showCaption: false, dropZoneEnabled: false
+            }
+        );
+
+    });
+
+    Fancybox.defaults.autoFocus = false
+
+    Fancybox.bind()
+</script>
+
+<script src="js/script.js"></script>
 </body>
 </html>
 
