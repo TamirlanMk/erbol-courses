@@ -750,4 +750,47 @@ img {
         margin-bottom: 0 !important;
         max-width: 30%;
     }
+
+    .footer__copy {
+        font-size: 10px;
+        text-align: center;
+        line-height: 14px;
+        color: #666;
+    }
+
+    .footer__adress {
+        text-align: center;
+    }
+
+    .footer__logos {
+        justify-content: center !important;
+    }
+
+    .footer__social {
+        justify-content: center !important;
+        margin-bottom: 20px;
+    }
+
+    .footer__links {
+        text-align: center;
+    }
+
+    .footer__contact {
+        text-align: center;
+    }
+
+    .footer__date {
+        text-align: center;
+        margin-bottom: 10px !important;
+    }
+
+    .footer__cookie {
+        font-size: 10px;
+        text-align: center;
+        line-height: 14px;
+    }
+
+    .footer__cookie a {
+        color: #666;
+    }
 }
